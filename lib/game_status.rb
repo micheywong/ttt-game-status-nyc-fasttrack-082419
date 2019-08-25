@@ -31,3 +31,8 @@ def winner(board)
     if won?(board)
       winning_combo = won?(board)  
       #winning combo = [6,7,8]
+      board(winning_combo,first)
+    end
+end
+      
+      
