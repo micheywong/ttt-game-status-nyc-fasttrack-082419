@@ -14,3 +14,20 @@ def won?(board)
         position_taken?(board, combo[0]) && board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
     end
 end
+
+def full?(board)
+    board.all?{|taken| taken == "X" || taken == "0")
+end
+
+def draw?(board)
+    full?(board) && !won?(board)
+end
+
+def over?(board)
+  won?(board) || full?(board)
+end
+
+def winner(board)
+    if won?(board)
+      winning_combo = won?(board)  
+      #winning combo = [6,7,8]
